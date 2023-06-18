@@ -7,7 +7,7 @@ require("dotenv").config()
 
 const app = express();
 
-app.use(express.static("public"));  //use this to use css files insie templates 
+app.use(express.static(__dirname+"/public/"));  //use this to use css files insie templates 
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.get("/",function(req,res){
