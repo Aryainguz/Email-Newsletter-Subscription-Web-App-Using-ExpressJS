@@ -1,6 +1,25 @@
 {
   "dependencies": {
     "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2"
-  }
+  },
+  "name": "news-letter-signup",
+  "version": "1.0.0",
+  "description": "An Express App that lets user sign up for Newsletter or Email Marketing ",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Newsletter",
+    "Express",
+    "App",
+    "Email",
+    "Subscribe",
+    "App"
+  ],
+  "author": "Aryan Inguz",
+  "license": "ISC"
 }

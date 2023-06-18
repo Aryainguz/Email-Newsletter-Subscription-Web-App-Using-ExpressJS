@@ -3,6 +3,8 @@ const bodyParser = require("body-parser");
 const https = require("https");
 const { request } = require("http");
 
+require("dotenv").config()
+
 const app = express();
 
 app.use(express.static("public"));  //use this to use css files insie templates 
@@ -14,8 +16,8 @@ app.get("/",function(req,res){
 
 app.post("/",function(req,res){
 
-    const key = "452e8d7e850745def07a9aa3828a78ac-us21"
-    const list_id = "3032762d40"
+    const key = process.env.API
+    const list_id = process.env.LIST_ID
 
     const email = req.body.email
     const fname = req.body.fname 
@@ -38,11 +40,11 @@ app.post("/",function(req,res){
 
     const options={
         method:"POST",
-        auth:"aryainguz:452e8d7e850745def07a9aa3828a78ac-us21"
+        auth:"aryainguz:"+process.env.API
     }
 
 
-    const url  = "https://us21.api.mailchimp.com/3.0/lists/3032762d40/"
+    const url  = "https://us21.api.mailchimp.com/3.0/lists/"+process.env.LIST_ID+"/"
 
     const request = https.request(url,options,function(response){
         if(response.statusCode==200){
