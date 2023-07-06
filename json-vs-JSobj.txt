@@ -1,0 +1,13 @@
+JSON is not same as JS Objects
+
+Js Objects can have variables
+But JSON can't have variables and is used by other programming languages aswell
+
+JSON.parse() is used to makes json into JS Object 
+JSON.stringify() is used to make JS Object to JSON
+
+python dictionary is not same as the json aswell
+to convert python dictionary or object to a json we use json.dumps()
+
+
+keep in mind that python dictionary and javascript objects and json all three are different and not same therefore use different methods to convert it to json first
