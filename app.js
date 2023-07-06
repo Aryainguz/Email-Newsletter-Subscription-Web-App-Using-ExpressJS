@@ -6,7 +6,7 @@ require("dotenv").config()
 
 const app = express();
 
-app.use(express.static("public"));  //use this to use css files inside templates 
+app.use(express.static("public"));  //use this to use css files insie templates 
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.get("/",function(req,res){
@@ -62,6 +62,6 @@ app.post("/",function(req,res){
 
 })
 
-app.listen("3000",function(){
+app.listen(process.env.PORT || 3000,function(){
     console.log("Server Started Sucessfully")
 })
